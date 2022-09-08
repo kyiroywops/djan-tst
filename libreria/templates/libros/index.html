@@ -1,0 +1,44 @@
+{% extends "paginas/base.html" %}
+
+{% block titulo %} Lista de libros {% endblock %}
+
+{% block contenido %}
+
+<div class="card">
+    <div class="card-header">
+        Listar libros
+    </div>
+    <div class="card-body">
+        <h4 class="card-title">Libros</h4>
+
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Titulo</th>
+                    <th>Imagen</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for libro in libros %}
+                <tr>
+                    <td>{{ libro.titulo }}</td>
+                    <td>{{ libro.descripcion }}</td>
+                    <td>{{ libro.fecha_publicacion }}</td>
+                    <td>
+                        <a href="{% url 'libros:detalle' libro.id %}" class="btn btn-primary">Ver</a>
+                        <a href="{% url 'libros:editar' libro.id %}" class="btn btn-warning">Editar</a>
+                        <a href="{% url 'libros:eliminar' libro.id %}" class="btn btn-danger">Eliminar</a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        
+    </div>
+    <div class="card-footer text-muted">
+        
+    </div>
+</div>
+
+{% endblock %}

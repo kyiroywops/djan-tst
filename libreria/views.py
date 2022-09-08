@@ -8,3 +8,5 @@ def inicio(request):
 
 def nosotros(request):
     return render(request, "paginas/nosotros.html")
+def libros(request):
+    return render(request, "paginas/libros.html")
