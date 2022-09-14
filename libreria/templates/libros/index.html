@@ -27,9 +27,8 @@
                     <td>{{ libro.descripcion }}</td>
                     <td>{{ libro.fecha_publicacion }}</td>
                     <td>
-                        <a href="{% url 'libros:detalle' libro.id %}" class="btn btn-primary">Ver</a>
-                        <a href="{% url 'libros:editar' libro.id %}" class="btn btn-warning">Editar</a>
-                        <a href="{% url 'libros:eliminar' libro.id %}" class="btn btn-danger">Eliminar</a>
+                        <a href="{% url 'editar' %}" role="button" class="btn btn-warning">Editar</a>
+                        <a href="{% url 'eliminar' %}" role= "button" class="btn btn-danger">Eliminar</a>
                     </td>
                 </tr>
                 {% endfor %}
