@@ -17,15 +17,17 @@
                     <th>ID</th>
                     <th>Titulo</th>
                     <th>Imagen</th>
+                    <th>Descripción</th>
                     <th>Acciones</th>
                 </tr>
             </thead>
             <tbody>
                 {% for libro in libros %}
                 <tr>
-                    <td>{{ libro.titulo }}</td>
-                    <td>{{ libro.descripcion }}</td>
-                    <td>{{ libro.fecha_publicacion }}</td>
+                    <td>1</td>
+                    <td>Dj con py</td>
+                    <td>Imagen.jpg</td>
+                    <td>Libros que habla de algo</td>
                     <td>
                         <a href="{% url 'editar' %}" role="button" class="btn btn-warning">Editar</a>
                         <a href="{% url 'eliminar' %}" role= "button" class="btn btn-danger">Eliminar</a>
