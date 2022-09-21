@@ -13,6 +13,8 @@
 
         <table class="table table-striped">
             <thead>
+
+            
                 <tr>
                     <th>ID</th>
                     <th>Titulo</th>
@@ -24,13 +26,13 @@
             <tbody>
                 {% for libro in libros %}
                 <tr>
-                    <td>1</td>
-                    <td>Dj con py</td>
-                    <td>Imagen.jpg</td>
-                    <td>Libros que habla de algo</td>
+                    <td>{{libro.id}}</td>
+                    <td>{{libro.titulo}}</td>
+                    <td>{{libro.imagen}}</td>
+                    <td>{{libro.descripcion}}</td>
                     <td>
-                        <a href="{% url 'editar' %}" role="button" class="btn btn-warning">Editar</a>
-                        <a href="{% url 'eliminar' %}" role= "button" class="btn btn-danger">Eliminar</a>
+                        <a name="" id="" href="{% url 'editar' %}" role="button" class="btn btn-info">Editar</a>
+                        <a name= "" id="" href="#" role= "button" class="btn btn-danger">Eliminar</a>
                     </td>
                 </tr>
                 {% endfor %}
