@@ -28,11 +28,14 @@
                 <tr>
                     <td>{{libro.id}}</td>
                     <td>{{libro.titulo}}</td>
-                    <td>{{libro.imagen}}</td>
+                    <td>
+                        <img src="{{libro.imagen.url}}" alt="" width="100px" />
+
+                    </td>
                     <td>{{libro.descripcion}}</td>
                     <td>
-                        <a name="" id="" href="{% url 'editar' %}" role="button" class="btn btn-info">Editar</a>
-                        <a name= "" id="" href="#" role= "button" class="btn btn-danger">Eliminar</a>
+                        <a name="" id="" href="{% url 'editar' libro.id %}" role="button" class="btn btn-info">Editar</a>
+                        <a name= "" id="" href="{% url 'eliminar' libro.id %}" role= "button" class="btn btn-danger">Eliminar</a>
                     </td>
                 </tr>
                 {% endfor %}
